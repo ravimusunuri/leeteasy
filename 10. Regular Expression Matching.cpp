@@ -4,13 +4,10 @@ public:
         int s_len = s.length();
         int p_len = p.length();
         
-        if ((s_len== 0) && (p_len == 0)) {
-            return true;
-        }
-        if ((p_len == 0) || (s_len == 0)){
-            return false;
-        }
-        int dp[s_len+1][p_len+1];
+        if (p_len == 0)
+            return (s_len == 0);
+        
+        bool dp[s_len+1][p_len+1];
         memset(dp, 0, sizeof(dp));
         
         dp[0][0] = 1;
