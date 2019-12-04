@@ -5,6 +5,9 @@ public:
         Node* p2 = NULL;
         Node* res_start = NULL;
         Node* res_end = NULL;
+        if (p1 == NULL) 
+            return NULL;
+        
         while (p1 != NULL) {
             Node* tmp= new Node(p1->val);
             p2 = p1->next;
