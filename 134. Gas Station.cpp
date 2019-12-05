@@ -1,7 +1,7 @@
 class Solution {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        int sum;
+        int sum = 0;
         int min_sum = INT_MAX;
         int min_idx = -1;
         
@@ -12,6 +12,6 @@ public:
                 min_idx = i;
             }
         }
-        return sum < 0 ? -1 : min_idx+1 % gas.size();
+        return sum < 0 ? -1 : ((min_idx+1) % gas.size());
     }
 };
